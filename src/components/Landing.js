@@ -27,14 +27,14 @@ function Landing() {
     const searchedCoines = coins.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()))
 
   return (
-    <div className='max-w-fit mx-auto'>
+    <div className=' max-w-screen-md mx-auto'>
     
         <input className='w-1/2 border-2 rounded-md px-2 mt-10' type="text" placeholder='Search...' value={search} onChange={searchHandler} />
 
         {
             !coins.length ? <Loader/> :
             
-            <div className='  border p-3 rounded-lg mx-auto mt-10'>
+            <div className='bg-gray-200  border p-3 rounded-lg mx-auto mt-10 w-fit'>
                 {
                     searchedCoines.map(coin => <Coin
                         key={coin.id}
